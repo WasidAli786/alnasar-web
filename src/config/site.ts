@@ -324,17 +324,22 @@ export const plansContent = [
 export const socialIcons = [
   {
     icon: "/images/social/instagram.svg",
+    link: "https://www.instagram.com/AlNassr/",
   },
   {
     icon: "/images/social/twitter.svg",
+    link: "https://x.com/AlNassrFC",
   },
   {
     icon: "/images/social/linkedin.svg",
+    link: "https://www.linkedin.com/company/alnassr/",
   },
   {
     icon: "/images/social/youtube.svg",
+    link: "https://www.youtube.com/Nassr",
   },
   {
     icon: "/images/social/facebook.svg",
+    link: "https://www.facebook.com/alnassrfc/",
   },
 ];

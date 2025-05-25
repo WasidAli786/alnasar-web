@@ -10,5 +10,9 @@ body {
 }
 
 .custom-container {
-  @apply max-w-screen-2xl w-full mx-auto px-5 md:px-0;
+  @apply max-w-screen-2xl w-full mx-auto px-5 md:px-10;
+}
+
+[data-slot="indicator"] {
+  transform: none !important;
 }

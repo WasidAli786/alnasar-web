@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NextImage from "../next-image";
 import clsx from "clsx";
 
 export const BenefitsSlider = ({ benefits }: { benefits: any[] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) =>
+        prevIndex === benefits.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [benefits.length]);
 
   return (
     <div className="mt-4 flex items-center gap-4 border border-custom-primary p-2 rounded-[10px]">
@@ -23,7 +33,9 @@ export const BenefitsSlider = ({ benefits }: { benefits: any[] }) => {
                   className="object-contain"
                 />
               </div>
-              <h2 className="text-white font-semibold">{benefit.title}</h2>
+              <h2 className="text-white font-semibold text-xs sm:text-base">
+                {benefit.title}
+              </h2>
             </div>
           ))}
         </div>

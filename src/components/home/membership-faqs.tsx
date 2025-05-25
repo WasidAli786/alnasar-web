@@ -28,11 +28,11 @@ export const MembershipFaqs = () => {
   return (
     <>
       <div className="bg-custom-secondary-100 py-5 sm:py-20 relative">
-        <div className="custom-container space-y-3 sm:space-x-6 z-50 relative">
+        <div className="custom-container sm:space-x-6 z-50 relative">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-custom-primary sm:text-center">
             MEMBERSHIP FAQS
           </h2>
-          <div>
+          <div className="mt-4 sm:mt-6">
             <Accordion
               variant="splitted"
               itemClasses={{
@@ -41,6 +41,7 @@ export const MembershipFaqs = () => {
                 indicator: "text-medium",
                 content: "text-small",
               }}
+              className="px-0"
             >
               {faqs.map((faq, index) => (
                 <AccordionItem
@@ -61,7 +62,7 @@ export const MembershipFaqs = () => {
             </Accordion>
           </div>
           <div>
-            <p className="text-white font-light text-xs sm:text-base">
+            <p className="text-white font-light text-xs sm:text-base mt-2">
               Visit our Help Center for all our FAQs on our Memberships.
             </p>
             <ButtonUI className="px-10 mt-3 sm:mt-6">HELP CENTER</ButtonUI>

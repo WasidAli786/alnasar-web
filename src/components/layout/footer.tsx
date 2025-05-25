@@ -14,19 +14,31 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-white flex flex-col items-center space-y-2 py-8">
-          <p className="text-sm">© 2025 al nassr fc. All rights reserved.</p>
-          <Link href="/" className="underline text-sm">
-            Privacy Policy | COOKIE POLICY
+          <p className="text-xs uppercase">
+            © 2025 al nassr fc. All rights reserved.
+          </p>
+          <Link href="/" className="uppercase text-xs underline">
+            Terms & Conditions*
           </Link>
-          <p className="text-sm">Terms & Conditions*</p>
+          <span className="flex gap-2 uppercase text-xs">
+            <Link href="/" className="hover:underline">
+              Privacy Policy
+            </Link>
+            <span>|</span>
+            <Link href="/" className="hover:underline">
+              Cookie Policy
+            </Link>
+          </span>
         </div>
         <div className="flex justify-center gap-4">
           {socialIcons.map((item, index) => (
-            <ButtonUI isIconOnly color='default' variant='light' key={index}>
-              <div className="relative h-6 w-6">
-                <NextImage src={item.icon} alt={`social-icon-${index}`} />
-              </div>
-            </ButtonUI>
+            <Link href={item.link} target="_blank" key={index}>
+              <ButtonUI isIconOnly color="default" variant="light">
+                <div className="relative h-6 w-6">
+                  <NextImage src={item.icon} alt={`social-icon-${index}`} />
+                </div>
+              </ButtonUI>
+            </Link>
           ))}
         </div>
       </footer>

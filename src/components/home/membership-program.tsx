@@ -59,11 +59,13 @@ const MembershipProgram = () => {
         </div>
       </div>
       <MembershipBenefits />
+      <div className="hidden sm:block">
       <img
         src="/images/left-bottom-sphere.png"
         alt=""
         className="absolute bottom-0 left-0 h-[70%] opacity-30"
       />
+      </div>
     </div>
   );
 };

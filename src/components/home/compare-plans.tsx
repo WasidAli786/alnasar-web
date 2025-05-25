@@ -19,7 +19,7 @@ const ComparePlans = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-custom-primary text-center">
             Compare Al-Nassr Tiers
           </h2>
-          <div className="custom-container">
+          <div className="custom-container !px-0 md:!px-5">
             <div className="flex divide-x-1 divide-white w-full bg-custom-secondary-100">
               {plansHeader.map((item, index) => (
                 <div
@@ -108,8 +108,8 @@ const ComparePlans = () => {
               </div>
             ))}
           </div>
-          <ButtonUI className="px-20" size="lg">
-            SIGN UP NOW!
+          <ButtonUI className="px-16" size="lg">
+            VIEW MORE
           </ButtonUI>
         </div>
       </div>
